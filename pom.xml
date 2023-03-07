@@ -24,7 +24,7 @@
 		<log4j.version>1.2.17</log4j.version>
 		<sonar.host.url>http://15.223.77.223:9000/</sonar.host.url>
 		<sonar.login>Senior</sonar.login>  
-		<sonar.login>73d633bb3ccee514ee3a870336fcc81bbd1606bb7</sonar.login>
+		<sonar.login>0de83ff2c48c10c5580682486e4a1d0ab1a3877a</sonar.login>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 	</properties>
@@ -39,8 +39,7 @@
 		
 		<!-- test dependencies -->
 		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
+			<groupId>junit</groupId>		<artifactId>junit</artifactId>
 			<version>3.8.1</version>
 			<scope>test</scope>
 		</dependency>
