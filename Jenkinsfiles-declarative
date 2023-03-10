@@ -1,5 +1,7 @@
 pipeline{
-  agent any 
+  agent{
+    label 'agent1'
+  }
   tools {
     maven "maven3.9.0"
   }  
@@ -40,24 +42,24 @@ pipeline{
 Please check build status.
 
 Thanks
-Landmark 
-+1 437 215 2483''', recipientProviders: [buildUser(), developers()], subject: 'success', to: 'paypal-team@gmail.com'
+LionTech
+647 381 8836''', recipientProviders: [buildUser(), developers()], subject: 'success', to: 'paypal-team@gmail.com'
     }
     success{
       emailext body: '''Hey guys
 Good job build and deployment is successful.
 
 Thanks
-Landmark 
-+1 437 215 2483''', recipientProviders: [buildUser(), developers()], subject: 'success', to: 'paypal-team@gmail.com'
+LionTech
+647 381 8836''', recipientProviders: [buildUser(), developers()], subject: 'success', to: 'paypal-team@gmail.com'
     } 
     failure{
       emailext body: '''Hey guys
 Build failed. Please resolve issues.
 
 Thanks
-Landmark 
-+1 437 215 2483''', recipientProviders: [buildUser(), developers()], subject: 'success', to: 'paypal-team@gmail.com'
+LionTech
+647 381 8836''', recipientProviders: [buildUser(), developers()], subject: 'success', to: 'paypal-team@gmail.com'
     }
   } 
 }
