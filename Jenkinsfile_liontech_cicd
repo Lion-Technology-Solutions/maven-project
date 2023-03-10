@@ -1,5 +1,8 @@
 node{
   def mavenHome = tool name: 'maven3.9.0'
+  agent{
+    label 'aget3'
+  }
   stage('1cloneCode'){
     git 'https://github.com/Lion-Technology-Solutions/liontech-web-app-jenkins-cicd.git'
   }
