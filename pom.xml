@@ -96,13 +96,13 @@
 	    <repository>
 	      <id>nexus</id>
 	      <name>LION TECH ACADEMY Releases Nexus Repository</name>
-	      <url>http://54.164.127.93:8081/repository/salijenkinsproject1-release/</url>
+	      <url>http://54.164.127.93:8081/repository/jenkinscicd1-release/</url>
 	    </repository>
 	    
 	    <snapshotRepository>
 	      <id>nexus</id>
 	      <name>LION TECH ACADEMY Snapshot Nexus Repository </name>
-	      <url>http://54.164.127.93:8081/repository/salijenkinsproject1-snapshot/</url>
+	      <url>http://54.164.127.93:8081/repository/jenkinscicd1-snapshot/</url>
 	    </snapshotRepository>
 	    
 	</distributionManagement>
