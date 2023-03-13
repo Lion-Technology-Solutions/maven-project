@@ -23,7 +23,7 @@ THIS IS is done in the Global tool configuration tab in jenkins
    <server>
       <id>nexus</id>
       <username>admin</username>
-       <password>Zion2020</password>
+       <password>6828</password>
     </server>
 
 
