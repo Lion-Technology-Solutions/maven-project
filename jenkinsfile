@@ -1,0 +1,8 @@
+node[
+def mavenhome  =  tool name:   'maven3.9.0'
+stage['scmclone']
+   git  'https://github.com/Lion-Technology-Solutions/liontech-web-app-jenkins-cicd.git'
+}
+stage {'install*test+build'}{
+    sh  "{mavenhome}/bin/mvn clean package"
+}
