@@ -22,9 +22,9 @@
 		<spring.version>5.1.2.RELEASE</spring.version>
 		<junit.version>4.11</junit.version>
 		<log4j.version>1.2.17</log4j.version>
-		<sonar.host.url>http://54.184.189.29:9000/</sonar.host.url>
+		<sonar.host.url>http://52.87.246.56:9000/</sonar.host.url>
 		<sonar.login>admin</sonar.login>  
-		<sonar.login>fcbc4d3e948876d8cec4b06848cc3348d5c290db</sonar.login>
+		<sonar.login>f3f3ca87352074d817fafdeef4b84ce39ab1eaa0</sonar.login>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 	</properties>
@@ -96,19 +96,19 @@
 	    <repository>
 	      <id>nexus</id>
 	      <name>LION TECH ACADEMY Releases Nexus Repository</name>
-	      <url>http://34.209.83.200:8081/repository/march11-release/</url>
+	      <url>http://44.203.255.174:8081/repository/dmissibi-welcome-app-release/</url>
 	    </repository>
 	    
 	    <snapshotRepository>
 	      <id>nexus</id>
 	      <name>LION TECH ACADEMY Snapshot Nexus Repository </name>
-	      <url>http://34.209.83.200:8081/repository/march11-snapshot/</url>
+	      <url>http://44.203.255.174:8081/repository/dmissibi-welcome-app-snapshot/</url>
 	    </snapshotRepository>
 	    
 	</distributionManagement>
 	
 	<build>
-		<finalName>LIONTECH-ACADEMY-DEVOPS</finalName>
+		<finalName>dmissibi-class20-welcome-app</finalName>
 		
 		<plugins>
 			<plugin>
