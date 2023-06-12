@@ -108,7 +108,7 @@
 	</distributionManagement>
 	
 	<build>
-		<finalName>LIONTECH-ACADEMY-DEVOPS</finalName>
+		<finalName>dmissibi-class20-welcome-app</finalName>
 		
 		<plugins>
 			<plugin>
