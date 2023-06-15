@@ -4,3 +4,4 @@ added sonarqube credentials
 edited the setting.xml file 
 added the nexus url to the pom.xml file 
 corrected my username in settings.xml file 
+corrected my nexus password again in settings.xml file 
