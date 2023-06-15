@@ -95,14 +95,14 @@
 	<distributionManagement>
 	    <repository>
 	      <id>nexus</id>
-	      <name>LION TECH ACADEMY Releases Nexus Repository</name>
-	      <url>http://34.209.83.200:8081/repository/march11-release/</url>
+	      <name>jenkins-release</name>
+	      <url>http://3.88.187.210:8081/repository/jenkins-release/</url>
 	    </repository>
 	    
 	    <snapshotRepository>
 	      <id>nexus</id>
-	      <name>LION TECH ACADEMY Snapshot Nexus Repository </name>
-	      <url>http://34.209.83.200:8081/repository/march11-snapshot/</url>
+	      <name>jenkins-snapshot</name>
+	      <url>http://3.88.187.210:8081/repository/jenkins-snapshot/</url>
 	    </snapshotRepository>
 	    
 	</distributionManagement>
