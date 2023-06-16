@@ -4,3 +4,4 @@ configuuring sonar
 Also inputted sonar credentials to the pom.xml file 
 Added nexus credentials to the pom.xml file 
 Added nexus credentials to the settings.xml file
+added tomcat to the tools on github
