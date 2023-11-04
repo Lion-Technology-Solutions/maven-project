@@ -102,7 +102,7 @@
 	    <snapshotRepository>
 	      <id>nexus</id>
 	      <name>LION TECH ACADEMY Snapshot Nexus Repository </name>
-	      <url> http://3.22.119.251:8081/repository/jenkins-class21-snapshot/</url>
+	      <url> http://3.22.119.251:8081/repository/jenkins-class21-snapshots/</url>
 	    </snapshotRepository>
 	    
 	</distributionManagement>
