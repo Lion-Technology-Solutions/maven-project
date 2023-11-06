@@ -9,7 +9,7 @@
 </head>
 </head>
 <body>
-<h1 align="center">Welcome to Lion Tech  Academy - Canada - Cameroon and Nigeria </h1>
+<h1 align="center">Welcome to Lion Tech  Academy - Canada - Cameroon and Nigeria . </h1>
 <h1 align="center">We are developing and supporting quality  Software Solutions to millions of clients.
 	           Dont worry, you will soon become a full fledge Devops engineer.
 	We offer  Training for DevOps with Linux and Cloud equipping IT Engineers for best performance.</h1>
