@@ -9,9 +9,9 @@
 </head>
 </head>
 <body>
-<h1 align="center">Welcome to LION TECH Solutions</h1>
+<h1 align="center">welcome to Lion Tech  Academy</h1>
 <h1 align="center">We are developing and supporting quality  Software Solutions to millions of clients.
-	           We are raising over 1m millionaires by 2030.
+	           Dont worry, you will soon become a full fledge Devops engineer.
 	We offer  Training for DevOps with Linux and Cloud equipping IT Engineers for best performance.</h1>
 <hr>
 <br>
