@@ -9,7 +9,7 @@
 </head>
 </head>
 <body>
-<h1 align="center">welcome to lion tech academy</h1>
+<h1 align="center">Welcome to Lion Tech Academy</h1>
 <h1 align="center">We are developing and supporting quality  Software Solutions to millions of clients.
 	Don't worry yo will soon become a devop engineer.
 	We offer  Training for DevOps with Linux and Cloud equipping IT Engineers for best performance.</h1>
