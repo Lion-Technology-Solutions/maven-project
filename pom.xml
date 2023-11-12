@@ -108,7 +108,7 @@
 	</distributionManagement>
 	
 	<build>
-		<finalName>class21-devops</finalName>
+		<finalName>class21-devops-engineers</finalName>
 		
 		<plugins>
 			<plugin>
