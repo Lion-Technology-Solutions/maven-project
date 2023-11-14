@@ -31,7 +31,7 @@ node{
         deploy adapters: [tomcat9(credentialsId: 'auto-deploy-tomcat', path: '', url: 'http://44.203.174.25:8009/')], contextPath: 'Stagging', war: 'target/*.war'
     }
 
-    stage('step8:Approval&Review+PrepForProd'){
+    stage('step8:Approval&Review+PrepForProd.'){
         sh "echo  'Application is ready for review and release to Production'"
         timeout(time:10, unit: 'DAYS'){
         input message: "App is ready for release to production, please review and sign off"
