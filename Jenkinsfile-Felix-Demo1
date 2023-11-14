@@ -1,0 +1,55 @@
+node{
+    def  mavenHome = tool name: 'maven_v_3.9.5'
+    stage('Step1:CloneSRC'){
+        git 'https://github.com/Felixliontech/liontech-web-app-jenkins-cicd'
+    
+    }
+
+    stage('Step2:Test&BuildAppByMaven'){
+        sh  "${mavenHome}/bin/mvn clean package"
+    }
+    stage('Step3:CodeQualityAnalysisBySonarQube'){
+        sh "${mavenHome}/bin/mvn sonar:sonar"
+    }
+
+    stage('Step4:UploadArtifactsIntoNexus'){
+        sh "${mavenHome}/bin/mvn deploy"
+    }
+
+    stage('Step5:DeployToDevEnv'){
+        sh "echo 'Deploying to Dev Environment' "
+        deploy adapters: [tomcat9(credentialsId: 'auto-deploy-tomcat', path: '', url: 'http://44.203.174.25:8009/')], contextPath: 'Dev', war: 'target/*.war'  
+    }
+
+    stage('Step6:DeployToTestEnv'){
+        sh "echo 'deploy to Test Environment' "
+        deploy adapters: [tomcat9(credentialsId: 'auto-deploy-tomcat', path: '', url: 'http://44.203.174.25:8009/')], contextPath: 'Test', war: 'target/*.war'
+    }
+
+    stage('Step7:DeployToUATEnv'){
+        sh "echo 'deploy to UAT or Staging Environment'"
+        deploy adapters: [tomcat9(credentialsId: 'auto-deploy-tomcat', path: '', url: 'http://44.203.174.25:8009/')], contextPath: 'Stagging', war: 'target/*.war'
+    }
+
+    stage('step8:Approval&Review+PrepForProd'){
+        sh "echo  'Application is ready for review and release to Production'"
+        timeout(time:10, unit: 'DAYS'){
+        input message: "App is ready for release to production, please review and sign off"
+        }
+    }
+
+    stage('Step9:DeployToProduction'){
+        sh "sleep 50"
+        deploy adapters: [tomcat9(credentialsId: 'auto-deploy-tomcat', path: '', url: 'http://44.203.174.25:8009/')], contextPath: 'Production', war: 'target/*.war'
+    }
+
+    stage('FinalReleaseStatement') {
+        echo 'congratulations for LMS v1.0 release'
+    }
+
+    stage('MSTeamNotifications'){
+      office365ConnectorSend message: 'CICD-Pipeline-Demo1-Felix', status: 'Done', webhookUrl: 'https://liontechacademy.webhook.office.com/webhookb2/7de6738b-f601-433e-b0ac-4a9e3b49e636@b290c85e-0692-4ada-8f25-2a3b60aca73e/JenkinsCI/e10ea185312c466a9135336926d9dcca/dcc4073d-d28b-49e6-b4ad-6e5219bfe2e8'   
+    }
+
+}
+
