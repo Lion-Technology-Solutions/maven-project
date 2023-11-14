@@ -13,7 +13,7 @@ node{
     }
 
     stage('Step4:UploadArtifactsIntoNexus'){
-        sh "${mavenHome}/bin/mvn deploy"
+        //sh "${mavenHome}/bin/mvn deploy"
     }
 
     stage('Step5:DeployToDevEnv'){
