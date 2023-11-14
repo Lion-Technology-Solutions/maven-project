@@ -24,7 +24,7 @@
 		<log4j.version>1.2.17</log4j.version>
 		<sonar.host.url>http://44.203.174.25:9000/</sonar.host.url>
 		<sonar.login>cloudsec</sonar.login>  
-		<sonar.login>056824318dee949f38e0ff6d8f696600deea5a86</sonar.login>
+		<sonar.login>7cf03c5d137aee79399a327b7bb56ad76efea74b</sonar.login>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 	</properties>
