@@ -18,17 +18,17 @@ node{
 
      stage('5deploy2DevEnv'){
         sh "echo 'deploying to dev environment'"
-     deploy adapters: [tomcat9(credentialsId: 'tomcatdeployer', path: '', url: 'http://100.26.50.138:8009/')], contextPath: 'dev', war: 'target/*war'
+     deploy adapters: [tomcat9(credentialsId: 'tomcatdeployer', path: '', url: 'http://34.202.164.88:8009/')], contextPath: 'dev', war: 'target/*war'
      }
 
      stage('6DeploytoTestEnv'){
         sh "echo 'deploying to test environment'"
-        deploy adapters: [tomcat9(credentialsId: 'tomcatdeployer', path: '', url: 'http://100.26.50.138:8009/')], contextPath: 'test', war: 'target/*war'
+        deploy adapters: [tomcat9(credentialsId: 'tomcatdeployer', path: '', url: 'http://34.202.164.88:8009/')], contextPath: 'test', war: 'target/*war'
      }
 
      stage('7deploy2UAT'){
         sh "echo 'deploy to UAT or staging enviornment'"
-        deploy adapters: [tomcat9(credentialsId: 'tomcatdeployer', path: '', url: 'http://100.26.50.138:8009/')], contextPath: 'staging', war: 'target/*war'
+        deploy adapters: [tomcat9(credentialsId: 'tomcatdeployer', path: '', url: 'http://34.202.164.88:8009/')], contextPath: 'staging', war: 'target/*war'
      }
 
      stage('8Approval&Review*prep4prod'){
@@ -40,7 +40,7 @@ node{
 
      stage('9DEPLOY2PROD'){
         sh "sleep 50"
-        deploy adapters: [tomcat9(credentialsId: 'tomcatdeployer', path: '', url: 'http://100.26.50.138:8009/')], contextPath: 'production', war: 'target/*war'
+        deploy adapters: [tomcat9(credentialsId: 'tomcatdeployer', path: '', url: 'http://34.202.164.88:8009/')], contextPath: 'production', war: 'target/*war'
      }
 
      stage('congratulationsforrelease'){
