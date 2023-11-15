@@ -1,0 +1,60 @@
+node{
+     def mavenHome = tool name:'maven3.9.5'
+     stage('1clonecode'){
+        git'https://github.com/muller-tech/liontech-web-app-jenkins-cicd.git'
+     }
+
+     stage('2Test&Buildapp'){
+        sh "${mavenHome}/bin/mvn clean package"
+     }
+     
+     stage('3codeQuality'){
+        sh "${mavenHome}/bin/mvn  sonar:sonar"
+     }
+
+     stage('4uploadArtifacts'){
+        sh "${mavenHome}/bin/mvn deploy"
+     }
+
+     stage('5deploy2DevEnv'){
+        sh "echo 'deploying to dev environment'"
+     deploy adapters: [tomcat9(credentialsId: 'tomcatdeployer', path: '', url: 'http://100.26.50.138:8009/')], contextPath: 'dev', war: 'target/*war'
+     }
+
+     stage('6DeploytoTestenv'){
+        sh "echo 'deploying to test environment'"
+        deploy adapters: [tomcat9(credentialsId: 'tomcatdeployer', path: '', url: 'http://100.26.50.138:8009/')], contextPath: 'test', war: 'target/*war'
+     }
+
+     stage('7deploy2UAT'){
+        sh "echo 'deploy to UAT or staging enviornment'"
+        deploy adapters: [tomcat9(credentialsId: 'tomcatdeployer', path: '', url: 'http://100.26.50.138:8009/')], contextPath: 'staging', war: 'target/*war'
+     }
+
+     stage('8Approval&Review*prep4prod'){
+        sh "echo 'application is ready for review and prod release'"
+        timeout(time:5,unit 'Days'){
+            input message: "app is ready for release to production ,please review and sign out"
+        }
+     }
+
+     stage('9DEPLOY2PROD'){
+        sh "sleep 50"
+        deploy adapters: [tomcat9(credentialsId: 'tomcatdeployer', path: '', url: 'http://100.26.50.138:8009/')], contextPath: 'production', war: 'target/*war'
+     }
+
+     stage('congratulationsforrelease'){
+        echo 'congratulations for lms v1 prod release'
+     }
+
+     stage('send MS Teams Notificatins'){
+        office365ConnectorSend message: 'class21 liontech release successful.', status: 'done', webhookUrl: 'https://liontechacademy.webhook.office.com/webhookb2/7de6738b-f601-433e-b0ac-4a9e3b49e636@b290c85e-0692-4ada-8f25-2a3b60aca73e/JenkinsCI/77b3cb376f744e7ba6840e939257325c/89f0fedb-4e4b-4e2a-b214-f3229d28627c'
+     }
+
+
+
+
+
+
+
+}
