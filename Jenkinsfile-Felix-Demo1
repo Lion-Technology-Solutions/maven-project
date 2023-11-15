@@ -18,17 +18,17 @@ node{
 
     stage('Step5:DeployToDevEnv'){
         sh "echo 'Deploying to Dev Environment' "
-        deploy adapters: [tomcat9(credentialsId: 'auto-deploy-tomcat', path: '', url: 'http://44.203.174.25:8009/')], contextPath: 'Dev', war: 'target/*.war'  
+        deploy adapters: [tomcat9(credentialsId: 'auto-deploy-tomcat', path: '', url: 'http://54.89.247.222:8009/')], contextPath: 'Dev', war: 'target/*.war'  
     }
 
     stage('Step6:DeployToTestEnv'){
         sh "echo 'deploy to Test Environment' "
-        deploy adapters: [tomcat9(credentialsId: 'auto-deploy-tomcat', path: '', url: 'http://44.203.174.25:8009/')], contextPath: 'Test', war: 'target/*.war'
+        deploy adapters: [tomcat9(credentialsId: 'auto-deploy-tomcat', path: '', url: 'http://54.89.247.222:8009/')], contextPath: 'Test', war: 'target/*.war'
     }
 
     stage('Step7:DeployToUATEnv'){
         sh "echo 'deploy to UAT or Staging Environment'"
-        deploy adapters: [tomcat9(credentialsId: 'auto-deploy-tomcat', path: '', url: 'http://44.203.174.25:8009/')], contextPath: 'Stagging', war: 'target/*.war'
+        deploy adapters: [tomcat9(credentialsId: 'auto-deploy-tomcat', path: '', url: 'http://54.89.247.222:8009/')], contextPath: 'Stagging', war: 'target/*.war'
     }
 
     stage('step8:Approval&Review+PrepForProd.'){
