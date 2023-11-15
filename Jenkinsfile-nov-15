@@ -20,7 +20,7 @@ node{
         deploy adapters: [tomcat9(credentialsId: 'tomcat-deploy', path: '', url: 'http://52.53.249.212:8009/')], contextPath: 'dev', war: 'target/*.war'
 
     }
-    stage('6DeploytoTestENV'){
+    stage('6DeploytoTestENV.'){
         sh "echo  'deploy to Test Environment' "
         deploy adapters: [tomcat9(credentialsId: 'tomcat-deploy', path: '', url: 'http://52.53.249.212:8009/')], contextPath: 'Test', war: 'target/*.war'
 
