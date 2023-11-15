@@ -1,7 +1,7 @@
 node{
      def mavenHome = tool name:'maven3.9.5'
      stage('1clonecode'){
-        git'https://github.com/muller-tech/liontech-web-app-jenkins-cicd.git'
+        git branch: 'nov15', url: 'https://github.com/muller-tech/liontech-web-app-jenkins-cicd.git'
      }
 
      stage('2Test&Buildapp'){
