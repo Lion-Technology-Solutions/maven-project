@@ -44,7 +44,7 @@ node{
      }
 
      stage('congratulationsforrelease'){
-        echo 'congratulations for lms v1 prod release'
+        echo 'congratulations for lms v1 production release'
      }
 
      stage('send MS Teams Notificatins'){
