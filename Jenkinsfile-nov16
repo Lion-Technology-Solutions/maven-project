@@ -17,7 +17,7 @@ node{
      }
 
      stage('5deploy2DevEnv'){
-        sh "echo 'deploying to dev environments'"
+        sh "echo 'deploying to dev environment'"
      deploy adapters: [tomcat9(credentialsId: 'tomcatdeployer', path: '', url: 'http://34.202.164.88:8009/')], contextPath: 'dev', war: 'target/*war'
      }
 
