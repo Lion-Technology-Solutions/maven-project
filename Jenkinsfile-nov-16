@@ -49,5 +49,4 @@ node{
         office365ConnectorSend message: 'furucollines-release-succesful', status: 'Done', webhookUrl: 'https://liontechacademy.webhook.office.com/webhookb2/7de6738b-f601-433e-b0ac-4a9e3b49e636@b290c85e-0692-4ada-8f25-2a3b60aca73e/JenkinsCI/d216836412ac49ceb626ef2aa91a34be/08e9e037-199a-44dd-9f57-c88b23ae49bb'
 
     }
-
 }
