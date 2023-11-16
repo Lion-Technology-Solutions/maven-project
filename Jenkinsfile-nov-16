@@ -1,8 +1,7 @@
 node{
     def mavenHome = tool name: 'maven3.9.5'
     stage('1clonecode'){
-        git 'https://github.com/Lion-Technology-Solutions/liontech-web-app-jenkins-cicd.git'
-
+        git branch: 'dev', url: 'https://github.com/Furucollins/liontech-web-app-jenkins-cicd.git'
     }
 
     stage('2Test&Buildapp'){
@@ -25,7 +24,7 @@ node{
         deploy adapters: [tomcat9(credentialsId: 'tomcat-deploy', path: '', url: 'http://52.53.249.212:8009/')], contextPath: 'Test', war: 'target/*.war'
 
     }
-    stage('7Deploy2UAT'){
+    stage('7Deploy2UATs'){
         sh "echo  'deploy to UAT or staging Environment' "
         deploy adapters: [tomcat9(credentialsId: 'tomcat-deploy', path: '', url: 'http://52.53.249.212:8009/')], contextPath: 'Staging', war: 'target/*.war'
 
@@ -51,14 +50,6 @@ node{
 
 
     }
-
-
-
-
-
-
-
-
 
 
 }
