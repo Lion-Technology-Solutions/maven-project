@@ -15,7 +15,7 @@ node{
         sh "${mavenHome}/bin/mvn  deploy"
     }
     stage('5deploy2DevEnv'){
-        sh sh "echo  'deploy to dev environment' "
+        sh  "echo  'deploy to dev environment' "
         deploy adapters: [tomcat9(credentialsId: 'tomcat-deploy', path: '', url: 'http://52.53.249.212:8009/')], contextPath: 'dev', war: 'target/*.war'
 
     }
