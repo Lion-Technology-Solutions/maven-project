@@ -27,7 +27,7 @@ node{
      }
 
      stage('7deploy2UAT'){
-        sh "echo 'deploy to UAT or staging enviornment'"
+        sh "echo 'deploy to UAT or staging enviornments'"
         deploy adapters: [tomcat9(credentialsId: 'tomcatdeployer', path: '', url: 'http://34.202.164.88:8009/')], contextPath: 'staging', war: 'target/*war'
      }
 
