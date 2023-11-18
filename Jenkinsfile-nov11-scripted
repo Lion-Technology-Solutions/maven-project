@@ -7,7 +7,7 @@ node('slave_1'){
          echo "Jenkins URL   ${env.JENKINS_URL}"
          echo "JOB  Name  ${env.JOB_NAME}" 
 
-stage('clonefromscm'){
+stage('clonefromscm17'){
     git branch: 'nov17', url: 'https://github.com/Lion-Technology-Solutions/liontech-web-app-jenkins-cicd.git' 
    //git credentialsId: 'JENKINS-PAT', url: 'https://github.com/Lion-Technology-Solutions/liontech-web-app-jenkins-cicd.git'
   // git branch: 'uat', credentialsId: 'JENKINS-PAT', url: 'https://github.com/Lion-Technology-Solutions/liontech-web-app-jenkins-cicd.git'
